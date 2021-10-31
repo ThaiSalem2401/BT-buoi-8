@@ -109,7 +109,7 @@ function isPaindrome() {
     }
     console.log(result);
 }
-isPaindrome();
+// isPaindrome();
 
 // Cách 2:
 // dùng for chạy từ đầu đến giữa
@@ -140,3 +140,131 @@ for (let i = 2; i <= 9; i++) {
     }
 }
 // multiplications();
+
+// 11. Đếm có bao nhiêu khoảng trắng trong một chuỗi?
+
+function bai11(){
+    let name = "Hello  world";
+    let dem = 0;
+    for(let index = 0; index < name.length; index++)
+    {
+        if(name[index] == " ")
+        {
+           dem++;
+        }
+    }
+    console.log("Có "+ dem +" khoảng trắng trong chuỗi. ");
+}
+// bai11();
+
+// 12. Hãy remove tất cả khoảng trắng, space và ‘enter’ trong một chuỗi
+
+function bai12(){
+    let name = "Hello  world";
+    name = name.split(" ").join("");
+    console.log("Kết quả sau khi xoá khoảng trắng:", name);
+  }
+// bai12();
+
+// 13. Hãy viết chương trình đảo ngược
+
+function bai13(){
+    let chuoi = "This is a beautiful day";
+    chuoi = chuoi.split(" ");
+    chuoi = chuoi.reverse();
+    for(let index = 0; index < chuoi.length; index++)
+    {
+        chuoi[index] = chuoi[index].split("");
+        chuoi[index] = chuoi[index].reverse();
+        chuoi[index] = chuoi[index].join("");
+    }
+    chuoi = chuoi.join(" ");
+    console.log("Chuỗi đảo ngược:");
+    console.log(chuoi);
+}
+// bai13();
+
+// 14. Nhập vào chuỗi s1 và s2, cho biết vị trí xuất hiện của chuỗi s2 trong s1.
+
+function bai14(){
+    var s1 = "This is a beautiful day";
+    var s2 = "is";
+    s1 = s1.split(" ");
+    s2 = s2.split(" ");
+    var x;
+    for(let index = 0; index < s1.length; index++)
+    {
+        if(s1[index] == s2[0])
+        {
+          x = index;
+        }
+    }
+    if(x > 0)
+    {
+      console.log("Vị trí của s2 trong s1: " + (x + 1));
+    }
+    else{
+      console.log("Chuỗi s2 không có trong s1");
+    }
+}
+// bai14();
+
+// 15. Viết chương trình chuẩn hóa họ tên.
+
+function bai15(){
+    var name = "NguyeN THI tho tHu hA";
+    name = name.toLowerCase();
+    name = name.split("");
+    for(let index = 0; index < name.length; index++)
+    {
+       if(index == 0)
+       {
+        name[index] = name[index].toUpperCase();
+       }
+       if(name[index] == " ")
+       {
+        name[index + 1] = name[index + 1].toUpperCase();
+       }
+    }
+    name = name.join("");
+    console.log(name);
+}
+// bai15();
+
+// 16. Viết chương trình lấy  id name của fb.
+
+// function bai16(){
+//     let chuoi1 = "https://www.facebook.com/ngothucdat";
+//     chuoi1 = chuoi1.split("");
+//     let chuoi2 = "";
+//     for(let index = chuoi1.length - 1; index >= 0; index--)
+//     {
+//        if(chuoi1[index] == '/')
+//        {
+//         chuoi2 += chuoi1.slice(index + 1, chuoi1).join("");
+//          break;
+//        }
+//     }
+//     console.log("Idname của link FB:");
+//     console.log(chuoi2);
+// }
+function bai16(){
+    var link = "https://www.facebook.com/ngothucdat";
+    link = link.split("");
+    var idName = "";
+    for(let index = link.length - 1; index >= 0; index--)
+    {
+       if(link[index] == '/')
+       {
+        idName += link.slice(index + 1, link.length).join("");
+         break;
+       }
+    }
+    console.log("Id của link Fb:");
+    console.log(idName);
+  }
+bai16();
+
+// 17.  Viết hàm số tính min, max của 3 số?
+
+// 18. 18. Viết hàm tìm vị trí xâu X tồn tại kề cuối trong xâu Y?
