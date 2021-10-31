@@ -233,21 +233,6 @@ function bai15(){
 
 // 16. Viết chương trình lấy  id name của fb.
 
-// function bai16(){
-//     let chuoi1 = "https://www.facebook.com/ngothucdat";
-//     chuoi1 = chuoi1.split("");
-//     let chuoi2 = "";
-//     for(let index = chuoi1.length - 1; index >= 0; index--)
-//     {
-//        if(chuoi1[index] == '/')
-//        {
-//         chuoi2 += chuoi1.slice(index + 1, chuoi1).join("");
-//          break;
-//        }
-//     }
-//     console.log("Idname của link FB:");
-//     console.log(chuoi2);
-// }
 function bai16(){
     var link = "https://www.facebook.com/ngothucdat";
     link = link.split("");
